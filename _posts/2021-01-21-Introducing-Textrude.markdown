@@ -2,6 +2,7 @@
 layout: post
 title:  "Introducing Textrude"
 description: "using Scriban to generate code from data"
+comments: true
 date:   2021-01-21
 categories: textrude tools
 ---

@@ -30,54 +30,54 @@
 
 
 
-      <footer>  
+      <footer>
 
-      <section>
-      
-        <table style="border: 0px;">
-          <td style="border: 0px;">
-            {% if page.previous %}
-            {% assign previous = page.previous %}
-            {% else %}
-            {% assign previous = site.posts[0] %}
-            {% endif %}
+        <section>
 
-            <a href="{{site.baseurl}}{{previous.url}}" title="Previous Post: {{previous.title}}">
-              <div>
-                <h4> &lt;-- {{previous.title}} </h4>
-              </div>
-            </a>
-          </td>
-          <td style="border: 0px;">
-            <p>
-              <a href="{{site.baseurl}}/">Home</a>
-            </p>
-          </td>
+          <table style="border: 0px;">
+            <td style="border: 0px;">
+              {% if page.previous %}
+              {% assign previous = page.previous %}
+              {% else %}
+              {% assign previous = site.posts[0] %}
+              {% endif %}
 
-          <td style="border: 0px;">
-            {% if page.next %}
-            {% assign next = page.next %}
-            {% else %}
-            {%comment%}
-            As the array index start at zero we substract 1 to the total count,
-            we then get the last post index in the site.posts array
-            {%endcomment%}
-            {% assign last lastPostIndex = site.posts | size | minus: 1 %}
-            {% assign next = site.posts[lastPostIndex] %}
-            {% endif %}
+              <a href="{{site.baseurl}}{{previous.url}}" title="Previous Post: {{previous.title}}">
+                <div>
+                  <h4> &lt;-- {{previous.title}} </h4>
+                </div>
+              </a>
+            </td>
+            <td style="border: 0px;">
+              <p>
+                <a href="{{site.baseurl}}/">Home</a>
+              </p>
+            </td>
 
-            <a href="{{site.baseurl}}{{next.url}}" title="next Post: {{next.title}}">
-              <div>
-                <h4> {{next.title}} --></h4>
-              </div>
-            </a>
+            <td style="border: 0px;">
+              {% if page.next %}
+              {% assign next = page.next %}
+              {% else %}
+              {%comment%}
+              As the array index start at zero we substract 1 to the total count,
+              we then get the last post index in the site.posts array
+              {%endcomment%}
+              {% assign last lastPostIndex = site.posts | size | minus: 1 %}
+              {% assign next = site.posts[lastPostIndex] %}
+              {% endif %}
 
-          </td>
+              <a href="{{site.baseurl}}{{next.url}}" title="next Post: {{next.title}}">
+                <div>
+                  <h4> {{next.title}} --></h4>
+                </div>
+              </a>
+
+            </td>
 
 
-        </table>
+          </table>
 
-   </section>
+        </section>
         <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml" | prepend: site.baseurl }}">via RSS</a>
         </p>
       </footer>
@@ -97,6 +97,36 @@
     ga('send', 'pageview');
   </script>
   {% endif %}
+
+  <div id="container">
+    <div class="inner">
+      <div id="disqus_thread"></div>
+    </div>
+  </div>
+
+  </section>
+
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+    var disqus_config = function () {
+      this.page.url = '{{ page.url | absolute_url }}';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = '{{ page.url | absolute_url }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://printf-npm.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+
+
 </body>
 
 </html>
