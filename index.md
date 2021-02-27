@@ -1,7 +1,7 @@
 ---
 layout: main
 title:  "printf"
-description: "my thoughts on software"
+description: "unfiltered thoughts on software"
 ---
 
 # My projects
