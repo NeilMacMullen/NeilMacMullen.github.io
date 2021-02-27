@@ -32,52 +32,7 @@
 
       <footer>  
 
-      <section>
-      
-        <table>
-          <td>
-            {% if page.previous %}
-            {% assign previous = page.previous %}
-            {% else %}
-            {% assign previous = site.posts[0] %}
-            {% endif %}
-
-            <a href="{{site.baseurl}}{{previous.url}}" title="Previous Post: {{previous.title}}">
-              <div>
-                <h4> &lt;-- {{previous.title}} </h4>
-              </div>
-            </a>
-          </td>
-          <td>
-            <p>
-              <a href="{{site.baseurl}}">Home</a>
-            </p>
-          </td>
-
-          <td>
-            {% if page.next %}
-            {% assign next = page.next %}
-            {% else %}
-            {%comment%}
-            As the array index start at zero we substract 1 to the total count,
-            we then get the last post index in the site.posts array
-            {%endcomment%}
-            {% assign last lastPostIndex = site.posts | size | minus: 1 %}
-            {% assign next = site.posts[lastPostIndex] %}
-            {% endif %}
-
-            <a href="{{site.baseurl}}{{next.url}}" title="next Post: {{next.title}}">
-              <div>
-                <h4> {{next.title}} --></h4>
-              </div>
-            </a>
-
-          </td>
-
-
-        </table>
-
-   </section>
+     
         <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml" | prepend: site.baseurl }}">via RSS</a>
         </p>
       </footer>
