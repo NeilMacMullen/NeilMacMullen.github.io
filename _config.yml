@@ -5,7 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://neilmacmullen.github.io/" # the base hostname & protocol for your site
 twitter_username: NeilMacMullen
 github_username:  MacmullenNeil
-google_analytics:
+google_analytics: "G-CMFCNKTJQF"
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-tactile
