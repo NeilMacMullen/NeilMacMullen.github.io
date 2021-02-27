@@ -1,8 +1,10 @@
 ---
 layout: main
+title:  "printf"
+description: "my thoughts on software"
 ---
 
-## My projects
+# My projects
 #### [Textrude](https://github.com/NeilMacMullen/Textrude)
  *Textrude is a code-generation and text-processing utility.*
 
@@ -13,7 +15,7 @@ layout: main
 
 
 
-## Archive
+# Archive
 {% for post in site.posts offset:1 limit:2 %}
   [{{post.title}} - *{{post.description}}* ]({{ post.url | prepend: site.baseurl }})
 
