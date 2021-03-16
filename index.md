@@ -1,12 +1,16 @@
 ---
 layout: main
 title:  "printf"
-description: "unfiltered thoughts on software"
+description: "thoughts on software"
 ---
 
 # My projects
 #### [Textrude](https://github.com/NeilMacMullen/Textrude)
  *Textrude is a code-generation and text-processing utility.*
+
+#### [jumpfs](https://github.com/NeilMacMullen/jumpfs)
+ *jumpfs is a tool to help developers navigate around their filesystem.*
+
 
 # Latest Blog Post
 {% for post in site.posts limit:1 %}
