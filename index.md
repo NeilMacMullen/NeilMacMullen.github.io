@@ -4,12 +4,7 @@ title:  "printf"
 description: "thoughts on software"
 ---
 
-# My projects
-#### [Textrude](https://github.com/NeilMacMullen/Textrude)
- *Textrude is a code-generation and text-processing utility.*
 
-#### [jumpfs](https://github.com/NeilMacMullen/jumpfs)
- *jumpfs is a tool to help developers navigate around their filesystem.*
 
 
 # Latest Blog Post
@@ -18,12 +13,16 @@ description: "thoughts on software"
 {% endfor %}
 
 
+# My projects
 
-# Archive
-{% for post in site.posts offset:1 limit:2 %}
+- [KustoLoco](https://github.com/NeilMacMullen/KustoLoco) *In-app querying using KQL*
+- [Textrude](https://github.com/NeilMacMullen/Textrude) *Code-generation and text-processing utility.*
+- [jumpfs](https://github.com/NeilMacMullen/jumpfs) *a tool to help developers navigate around their filesystem.*
+
+
+# Blog Archive
+{% for post in site.posts offset:1 limit:10 %}
   [{{post.title}} - *{{post.description}}* ]({{ post.url | prepend: site.baseurl }})
-
-  
 {% endfor %}
 
 
